@@ -83,7 +83,7 @@ switch (ENV) {
       {
         plugins: [
           new ExtractTextPlugin({
-            filename: 'extract.css',
+            filename: 'transwarp.css',
             allChunks: true
           })
         ]
@@ -141,7 +141,7 @@ switch (ENV) {
       {
         plugins: [
           new ExtractTextPlugin({
-            filename: 'extract.css',
+            filename: 'transwarp.css',
             allChunks: true
           })
         ]
@@ -193,7 +193,7 @@ switch (ENV) {
       {
         plugins: [
           new ExtractTextPlugin({
-            filename: 'extract.css',
+            filename: 'transwarp.css',
             allChunks: true
           })
         ]
