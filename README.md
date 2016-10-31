@@ -1,4 +1,4 @@
-# transwarp-studio
+# studio
 
 ## Getting started
 

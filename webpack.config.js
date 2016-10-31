@@ -10,7 +10,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 let config;
 
 // basic configuration:
-const title = "Transwarp Studio";
+const title = "Studio";
 const baseUrl = '/';
 const rootDir = path.resolve();
 const srcDir = path.resolve('src');
@@ -83,7 +83,7 @@ switch (ENV) {
       {
         plugins: [
           new ExtractTextPlugin({
-            filename: 'transwarp.css',
+            filename: 'studio.css',
             allChunks: true
           })
         ]
@@ -141,7 +141,7 @@ switch (ENV) {
       {
         plugins: [
           new ExtractTextPlugin({
-            filename: 'transwarp.css',
+            filename: 'studio.css',
             allChunks: true
           })
         ]
@@ -193,7 +193,7 @@ switch (ENV) {
       {
         plugins: [
           new ExtractTextPlugin({
-            filename: 'transwarp.css',
+            filename: 'studio.css',
             allChunks: true
           })
         ]
