@@ -10,7 +10,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 let config;
 
 // basic configuration:
-const title = "Studio";
+const title = "Transwarp Governor";
 const baseUrl = '/';
 const rootDir = path.resolve();
 const srcDir = path.resolve('src');
@@ -83,7 +83,7 @@ switch (ENV) {
       {
         plugins: [
           new ExtractTextPlugin({
-            filename: 'studio.css',
+            filename: 'transwarp-governor.css',
             allChunks: true
           })
         ]
@@ -141,7 +141,7 @@ switch (ENV) {
       {
         plugins: [
           new ExtractTextPlugin({
-            filename: 'studio.css',
+            filename: 'transwarp-governor.css',
             allChunks: true
           })
         ]
@@ -193,7 +193,7 @@ switch (ENV) {
       {
         plugins: [
           new ExtractTextPlugin({
-            filename: 'studio.css',
+            filename: 'transwarp-governor.css',
             allChunks: true
           })
         ]
