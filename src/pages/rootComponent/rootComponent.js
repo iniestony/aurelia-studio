@@ -1,7 +1,7 @@
 export class RootComponent {
 
   configureRouter(config, router) {
-    config.title = 'Studio';
+    config.title = 'Transwarp Governor';
     config.map([
       { route: ["/", "/dashboard"], name: "dashboard", moduleId: "../dashboard/dashboard", nav: true, title: "仪表盘"},
       { route: ["/management"], name: "management", moduleId: "../management/management", nav: true, title: "管理"}
