@@ -7,6 +7,8 @@ const path = require('path');
 const ENV = process.env.NODE_ENV && process.env.NODE_ENV.toLowerCase() || 'development';
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const bourbonPaths = require('node-bourbon').includePaths;
+
 let config;
 
 // basic configuration:
@@ -95,14 +97,19 @@ switch (ENV) {
             test: /\.css$/,
             loader: ExtractTextPlugin.extract({
               fallbackLoader: 'style-loader',
-              loader: 'css-loader'
+              loader: 'css-loader!autoprefixer-loader'
             })
           }, {
             test: /\.scss$/,
             loader: ExtractTextPlugin.extract({
               fallbackLoader: 'style-loader',
-              loader: 'css-loader!sass-loader'
-            })
+              loader: 'css-loader!autoprefixer-loader!sass-loader?includePaths[]=' + bourbonPaths
+            }),
+            exclude: [
+              path.resolve(__dirname, "src/pages"),
+              path.resolve(__dirname, "src/components"),
+              path.resolve(__dirname, "src/services")
+            ]
           }]
         }
       },
@@ -112,7 +119,7 @@ switch (ENV) {
       require('@easy-webpack/config-global-jquery')(),
       require('@easy-webpack/config-global-regenerator')(),
       require('@easy-webpack/config-generate-index-html')
-        ({minify: true}),
+        ({minify: true, overrideOptions: {filename: 'index.html', hash: true}}),
 
       // require('@easy-webpack/config-copy-files')
       //   ({patterns: [{ from: 'favicon.ico', to: 'favicon.ico' }]}),
@@ -153,14 +160,19 @@ switch (ENV) {
             test: /\.css$/,
             loader: ExtractTextPlugin.extract({
               fallbackLoader: 'style-loader',
-              loader: 'css-loader?sourceMap'
+              loader: 'css-loader?sourceMap!autoprefixer-loader'
             })
           }, {
             test: /\.scss$/,
             loader: ExtractTextPlugin.extract({
               fallbackLoader: 'style-loader',
-              loader: 'css-loader?sourceMap!sass-loader?sourceMap'
-            })
+              loader: 'css-loader?sourceMap!autoprefixer-loader!sass-loader?sourceMap&includePaths[]=' + bourbonPaths
+            }),
+            exclude: [
+              path.resolve(__dirname, "src/pages"),
+              path.resolve(__dirname, "src/components"),
+              path.resolve(__dirname, "src/services")
+            ]
           }]
         }
       },
@@ -169,7 +181,8 @@ switch (ENV) {
       require('@easy-webpack/config-global-bluebird')(),
       require('@easy-webpack/config-global-jquery')(),
       require('@easy-webpack/config-global-regenerator')(),
-      require('@easy-webpack/config-generate-index-html')(),
+      require('@easy-webpack/config-generate-index-html')
+        ({minify: false, overrideOptions: {filename: 'index.html', hash: false}}),
 
       require('@easy-webpack/config-test-coverage-istanbul')()
     );
@@ -205,14 +218,19 @@ switch (ENV) {
             test: /\.css$/,
             loader: ExtractTextPlugin.extract({
               fallbackLoader: 'style-loader',
-              loader: 'css-loader?sourceMap'
+              loader: 'css-loader?sourceMap!autoprefixer-loader'
             })
           }, {
             test: /\.scss$/,
             loader: ExtractTextPlugin.extract({
               fallbackLoader: 'style-loader',
-              loader: 'css-loader?sourceMap!sass-loader?sourceMap'
-            })
+              loader: 'css-loader?sourceMap!autoprefixer-loader!sass-loader?sourceMap&includePaths[]=' + bourbonPaths
+            }),
+            exclude: [
+              path.resolve(__dirname, "src/pages"),
+              path.resolve(__dirname, "src/components"),
+              path.resolve(__dirname, "src/services")
+            ]
           }]
         }
       },
@@ -223,7 +241,7 @@ switch (ENV) {
       require('@easy-webpack/config-global-jquery')(),
       require('@easy-webpack/config-global-regenerator')(),
       require('@easy-webpack/config-generate-index-html')
-        ({minify: false}),
+        ({minify: false, overrideOptions: {filename: 'index.html', hash: true}}),
 
       // require('@easy-webpack/config-copy-files')
       //   ({patterns: [{ from: 'favicon.ico', to: 'favicon.ico' }]}),

@@ -1,3 +1,6 @@
 @charset "utf-8";
-@import "../node_modules/bootstrap/dist/css/bootstrap.css";
 @import "../styles/reset";
+@import 'bourbon';
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+
+@import 'pages/dashboard/dashboard';
