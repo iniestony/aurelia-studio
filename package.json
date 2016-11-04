@@ -1,9 +1,9 @@
 {
-  "name": "transwarp-governor",
+  "name": "transwarp-portal",
   "version": "1.0.3",
-  "description": "transwarp-governor with webpack and es6 aurelia",
+  "description": "transwarp-portal with webpack and es6 aurelia",
   "main": "dist/electron.js",
-  "productName": "transwarp-governor",
+  "productName": "transwarp-portal",
   "scripts": {
     "webdriver:update": "cross-env ./node_modules/.bin/webdriver-manager update",
     "webdriver:start": "cross-env ./node_modules/.bin/webdriver-manager start",

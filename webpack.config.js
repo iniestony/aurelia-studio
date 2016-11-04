@@ -6,13 +6,11 @@ const get = easyWebpack.get;
 const path = require('path');
 const ENV = process.env.NODE_ENV && process.env.NODE_ENV.toLowerCase() || 'development';
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
 const bourbonPaths = require('node-bourbon').includePaths;
 
 let config;
-
 // basic configuration:
-const title = "Transwarp Governor";
+const title = "Transwarp Portal";
 const rootDir = path.resolve();
 const srcDir = path.resolve('src');
 const outDir = path.resolve('dist');
@@ -84,7 +82,7 @@ switch (ENV) {
       {
         plugins: [
           new ExtractTextPlugin({
-            filename: 'transwarp-governor.css',
+            filename: 'transwarp-portal.css',
             allChunks: true
           })
         ]
@@ -147,7 +145,7 @@ switch (ENV) {
       {
         plugins: [
           new ExtractTextPlugin({
-            filename: 'transwarp-governor.css',
+            filename: 'transwarp-portal.css',
             allChunks: true
           })
         ]
@@ -205,7 +203,7 @@ switch (ENV) {
       {
         plugins: [
           new ExtractTextPlugin({
-            filename: 'transwarp-governor.css',
+            filename: 'transwarp-portal.css',
             allChunks: true
           })
         ]
