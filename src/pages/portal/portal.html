@@ -1,3 +1,7 @@
 <template>
-  <router-view containerless></router-view>
+  <require from="../../components/leftNavBar/left-nav-bar"></require>
+  <div class="t-page-portal">
+    <left-nav-bar current-nav.bind="currentNav"></left-nav-bar>
+    <router-view containerless></router-view>
+  </div>
 </template>

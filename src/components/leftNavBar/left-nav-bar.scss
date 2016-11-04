@@ -1,0 +1,24 @@
+div.t-component-left-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background-color: rgb(32, 39, 49);
+  z-index: 2;
+
+  .logo {
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid #282D31;
+    position: relative;
+
+    img:nth-child(1) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+
+
+}
