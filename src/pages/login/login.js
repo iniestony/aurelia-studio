@@ -2,7 +2,7 @@ import {inject} from "aurelia-framework";
 import {Router} from "aurelia-router";
 
 @inject(Router)
-export class Management {
+export class Login {
   
   constructor(r) {
     this.router = r;
@@ -12,7 +12,9 @@ export class Management {
     
   }
   
-  
+  login() {
+    this.router.navigate("/portal/dashboard");
+  }
   
   
   

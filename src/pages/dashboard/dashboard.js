@@ -11,11 +11,4 @@ export class Dashboard {
   attached() {
     
   }
-  
-  toManagement() {
-    this.router.navigateToRoute("management");
-  }
-
-
-
 }
