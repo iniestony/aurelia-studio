@@ -19,7 +19,8 @@ export class LeftNavBar {
   toggleThirdNav = (_secondNav, _event, _open) => {
     if(_open){
       _secondNav.secondNavOpen = _open;
-      $(_event.target).parents('li.second-nav').find('ul.third-ul').slideDown(300);
+      let _offsetTop = $(_event.target).parents('li.second-nav').offset().top || 100;
+      $(_event.target).parents('li.second-nav').find('ul.third-ul').css("top", _offsetTop + "px").slideDown(300);
     }
     else{
       this.timeoutID = setTimeout(() => {
