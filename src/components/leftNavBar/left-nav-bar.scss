@@ -15,14 +15,17 @@ div.t-component-left-nav-bar {
       height: 60px;
       line-height: 60px;
       text-align: center;
-      font-size: 30px;
 
       &:nth-child(1) {
         width: 180px;
+        color: rgb(255, 255, 255);
+        font-size: 25px;
       }
 
       &:nth-child(2) {
         width: 60px;
+        color: rgb(95, 108, 128);
+        font-size: 30px;
       }
     }
   }

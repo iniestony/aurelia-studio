@@ -24,8 +24,14 @@ footer, header, menu, nav, section, main {
   display: block;
 }
 
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
   line-height: 1;
+  @include font-smoothing;
 }
 
 ol, ul {
