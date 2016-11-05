@@ -1,3 +1,6 @@
+$nav-white: rgb(231, 231, 231);
+$nav-blue: rgb(31, 127, 192);
+
 div.t-component-left-nav-bar {
   position: fixed;
   top: 0;
@@ -7,7 +10,7 @@ div.t-component-left-nav-bar {
   background-color: rgb(32, 39, 49);
   z-index: 2;
 
-  div.logo {
+  div.t-component-left-nav-bar-logo {
     height: 60px;
 
     span.icon {
@@ -18,7 +21,7 @@ div.t-component-left-nav-bar {
 
       &:nth-child(1) {
         width: 180px;
-        color: rgb(255, 255, 255);
+        color: $nav-white;
         font-size: 25px;
       }
 
@@ -30,6 +33,88 @@ div.t-component-left-nav-bar {
     }
   }
 
+  ul.t-component-left-nav-bar-nav {
+    height: calc(100vh - 60px);
+    width: 100%;
+    overflow-y: auto;
 
+    li.first-nav {
+      @include user-select(none);
 
+      &:not(.open):last-child {
+
+        label {
+          border-bottom: 1px solid rgb(44, 55, 71);
+        }
+      }
+
+      &.open {
+
+        label span.icon.icon-arrow {
+          @include transform(translateZ(0));
+        }
+      }
+
+      label {
+        display: inline-block;
+        height: 42px;
+        line-height: 40px;
+        width: 100%;
+        font-size: 20px;
+        border-top: 1px solid rgb(44, 55, 71);
+        cursor: pointer;
+        color: $nav-white;
+        background-color: rgb(39, 49, 65);
+        border-left: 2px solid rgb(39, 49, 65);
+
+        span.icon {
+          display: inline-block;
+          height: 40px;
+          line-height: 40px;
+          width: 40px;
+          text-align: center;
+          @include transition(transform 0.3s);
+          @include transform(rotate(-90deg));
+        }
+
+        &.active, &:hover {
+          background-color: rgb(49, 61, 78);
+          border-left: 2px solid $nav-blue;
+        }
+      }
+
+      ul {
+        border-top: 1px solid rgb(44, 55, 71);
+        display: none;
+
+        li.second-nav {
+          @include user-select(none);
+
+          a {
+            display: inline-block;
+            height: 40px;
+            line-height: 40px;
+            width: 100%;
+            font-size: 18px;
+            padding-left: 20px;
+            cursor: pointer;
+            color: $nav-white;
+            text-decoration: none;
+
+            span.icon {
+              display: inline-block;
+              height: 40px;
+              line-height: 40px;
+              width: 30px;
+              text-align: center;
+            }
+
+            &.active, &:hover {
+              background-color: $nav-blue;
+            }
+          }
+        }
+      }
+    }
+  }
 }

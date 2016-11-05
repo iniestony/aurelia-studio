@@ -1,10 +1,29 @@
 <template>
   <div class="t-component-left-nav-bar">
-    <div class="logo">
+    <div class="t-component-left-nav-bar-logo">
       <span class="icon icon-settings"></span>
       <span class="icon icon-menu"></span>
     </div>
 
+    <ul class="t-component-left-nav-bar-nav">
+      <li class="first-nav ${(navigation.firstNavOpen)?'open':''}" repeat.for="navigation of navigations">
+        <label click.trigger="navigation.firstNavCallback($index, $event)">
+          <span class="icon ${navigation.firstNavIcon}"></span>
+          ${navigation.firstNavName}
+        </label>
+        <div if.bind="navigation.secondNavs.length > 0">
+          <ul>
+            <li class="second-nav" repeat.for="secondNav of navigation.secondNavs">
+              <a>
+                <span class="icon ${secondNav.secondNavIcon}"></span>
+                ${secondNav.secondNavName}
+              </a>
+              <!-- third nav here -->
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
 
 
   </div>
