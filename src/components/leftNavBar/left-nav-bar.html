@@ -7,24 +7,29 @@
 
     <ul class="t-component-left-nav-bar-nav">
       <li class="first-nav ${(navigation.firstNavOpen)?'open':''}" repeat.for="navigation of navigations">
-        <label click.trigger="navigation.firstNavCallback($index, $event)">
+        <label click.trigger="navigation.firstNavCallback(navigation, $event)">
           <span class="icon ${navigation.firstNavIcon}"></span>
           ${navigation.firstNavName}
         </label>
-        <div if.bind="navigation.secondNavs.length > 0">
-          <ul>
-            <li class="second-nav" repeat.for="secondNav of navigation.secondNavs">
-              <a>
-                <span class="icon ${secondNav.secondNavIcon}"></span>
-                ${secondNav.secondNavName}
-              </a>
-              <!-- third nav here -->
-            </li>
-          </ul>
-        </div>
+        <ul class="second-ul">
+          <li class="second-nav" repeat.for="secondNav of navigation.secondNavs">
+            <a mouseover.trigger="secondNav.secondNavCallback(secondNav, $event, true)"
+               mouseleave.trigger="secondNav.secondNavCallback(secondNav, $event, false)">
+              <span class="icon ${secondNav.secondNavIcon}"></span>
+              ${secondNav.secondNavName}
+            </a>
+            <ul class="third-ul" mouseover.trigger="setNavBlock(secondNav, $event, true)"
+                mouseleave.trigger="setNavBlock(secondNav, $event, false)">
+              <li class="third-nav" repeat.for="thirdNav of secondNav.thirdNavs">
+                <a>
+                  <span class="icon ${thirdNav.thirdNavIcon}"></span>
+                  ${thirdNav.thirdNavName}
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </li>
     </ul>
-
-
   </div>
 </template>
