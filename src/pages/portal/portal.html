@@ -1,7 +1,9 @@
 <template>
   <require from="../../components/leftNavBar/left-nav-bar"></require>
+  <require from="../../components/topSearchBar/top-search-bar"></require>
   <div class="t-page-portal">
     <left-nav-bar current-nav.bind="currentNav"></left-nav-bar>
+    <top-search-bar></top-search-bar>
     <router-view containerless></router-view>
   </div>
 </template>
