@@ -43,32 +43,35 @@ div.t-component-top-search-bar {
       display: flex;
       justify-content: space-between;
 
-      span.icon-settings, span.icon-info {
+      span.icon-settings, span.icon-info, span.icon-alert {
         font-size: 20px;
         color: rgb(106, 120, 142);
         display: inline-block;
         height: 60px;
         line-height: 60px;
-        width: 60px;
+        width: 50px;
         text-align: center;
         cursor: pointer;
       }
 
-      span.search-alert {
+      span.search-alert-active {
         font-size: 20px;
         color: rgb(255, 255, 255);
         display: inline-block;
         height: 40px;
         line-height: 40px;
         width: 40px;
-        margin: 10px;
+        margin: 10px 15px;
         text-align: center;
         background-color: rgb(233, 84, 87);
         border: 1px solid rgb(202, 44, 48);
         border-radius: 4px;
-        box-shadow: 0 0 1px 1px rgb(202, 44, 48);
         cursor: pointer;
         @include user-select(none);
+
+        &:hover {
+          box-shadow: 0 0 1px 1px rgb(202, 44, 48);
+        }
       }
 
       label.user-info {
@@ -77,7 +80,7 @@ div.t-component-top-search-bar {
         display: inline-block;
         height: 40px;
         line-height: 40px;
-        margin: 10px 0 10px 10px;
+        margin: 10px 0 10px 5px;
         background-color: transparent;
         cursor: pointer;
         @include user-select(none);

@@ -9,7 +9,8 @@
       <div class="search-right">
         <span class="icon-settings"></span>
         <span class="icon-info"></span>
-        <span class="search-alert">23</span>
+        <span class="search-alert-active" if.bind="alerts > 0">${alerts}</span>
+        <span class="icon-alert" if.bind="alerts <= 0"></span>
         <label class="user-info ${showUserInfo?'active':''}" click.trigger="toggleMenu()"
                blur.trigger="closeMenu()" tabindex="0">
           ${username}<span class="icon-arrow"></span>

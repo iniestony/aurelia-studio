@@ -3,6 +3,8 @@
 @import 'bourbon';
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
 
+@import "../styles/mixin";
+
 @import 'pages/login/login';
 @import 'pages/portal/portal';
 @import 'pages/dashboard/dashboard';

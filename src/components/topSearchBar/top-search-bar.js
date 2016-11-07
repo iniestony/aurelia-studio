@@ -5,9 +5,11 @@ import { EventAggregator } from 'aurelia-event-aggregator';
 @inject(Router, EventAggregator)
 @containerless()
 export class TopSearchBar {
-
-  username = "support@transwarp.io";
+  
   showUserInfo = false;
+  
+  username = "support@transwarp.io";
+  alerts = 0;
 
   toggleMenu() {
     this.showUserInfo = !this.showUserInfo;
