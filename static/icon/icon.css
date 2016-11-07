@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?wk3xd8');
-  src:  url('fonts/icomoon.eot?wk3xd8#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?wk3xd8') format('truetype'),
-    url('fonts/icomoon.woff?wk3xd8') format('woff'),
-    url('fonts/icomoon.svg?wk3xd8#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?qvgfdk');
+  src:  url('fonts/icomoon.eot?qvgfdk#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?qvgfdk') format('truetype'),
+    url('fonts/icomoon.woff?qvgfdk') format('woff'),
+    url('fonts/icomoon.svg?qvgfdk#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,13 +24,91 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-folder-close:before {
+  content: "\e91c";
+}
+.icon-folder-open:before {
+  content: "\e91d";
+}
+.icon-transpedia:before {
+  content: "\e909";
+}
+.icon-role:before {
+  content: "\e90a";
+}
+.icon-project-asset:before {
+  content: "\e90b";
+}
+.icon-analyze:before {
+  content: "\e90c";
+}
+.icon-application-market:before {
+  content: "\e90d";
+}
+.icon-bulkload:before {
+  content: "\e90e";
+}
+.icon-data-asset:before {
+  content: "\e90f";
+}
+.icon-hdfs-browser:before {
+  content: "\e910";
+}
+.icon-homepage:before {
+  content: "\e911";
+}
+.icon-message:before {
+  content: "\e912";
+}
+.icon-metadata:before {
+  content: "\e913";
+}
+.icon-model-store:before {
+  content: "\e914";
+}
+.icon-notebook:before {
+  content: "\e915";
+}
+.icon-olap:before {
+  content: "\e916";
+}
+.icon-report:before {
+  content: "\e917";
+}
+.icon-tdt:before {
+  content: "\e918";
+}
+.icon-ticket:before {
+  content: "\e919";
+}
+.icon-user:before {
+  content: "\e91a";
+}
+.icon-workflow:before {
+  content: "\e91b";
+}
+.icon-tdh-service:before {
+  content: "\e905";
+}
+.icon-tenant:before {
+  content: "\e906";
+}
+.icon-transwarp-studio-logo:before {
+  content: "\e907";
+}
+.icon-transwarp-studio:before {
+  content: "\e908";
+}
+.icon-arrow-right:before {
+  content: "\e91e";
+}
 .icon-search:before {
   content: "\e903";
 }
 .icon-info:before {
   content: "\e904";
 }
-.icon-arrow:before {
+.icon-arrow-bottom:before {
   content: "\e902";
 }
 .icon-menu:before {

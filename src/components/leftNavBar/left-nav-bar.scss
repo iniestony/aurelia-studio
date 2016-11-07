@@ -12,23 +12,24 @@ div.t-component-left-nav-bar {
 
   div.t-component-left-nav-bar-logo {
     height: 60px;
+    display: flex;
 
     span.icon {
-      display: table-cell;
+      display: inline-block;
       height: 60px;
       line-height: 60px;
       text-align: center;
 
       &:nth-child(1) {
-        width: 180px;
+        width: 190px;
         color: $nav-white;
-        font-size: 25px;
+        font-size: 33px;
       }
 
       &:nth-child(2) {
-        width: 60px;
+        width: 50px;
         color: rgb(95, 108, 128);
-        font-size: 30px;
+        font-size: 24px;
       }
     }
   }
@@ -50,8 +51,8 @@ div.t-component-left-nav-bar {
 
       &.open {
 
-        label span.icon.icon-arrow {
-          @include transform(translateZ(0));
+        label span.icon.icon-arrow-right {
+          @include transform(rotate(90deg));
         }
       }
 
@@ -74,7 +75,7 @@ div.t-component-left-nav-bar {
           width: 40px;
           text-align: center;
           @include transition(transform 0.3s);
-          @include transform(rotate(-90deg));
+          @include transform(translateZ(0));
         }
 
         &.active, &:hover {

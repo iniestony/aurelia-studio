@@ -41,101 +41,121 @@ export class LeftNavBar {
 
   navigations = [{
     "firstNavName": "首页",
-    "firstNavIcon": "icon-menu",
+    "firstNavIcon": "icon-homepage",
     "firstNavOpen": false,
     "firstNavCallback": () => {}
   },{
     "firstNavName": "产品与服务",
-    "firstNavIcon": "icon-arrow",
+    "firstNavIcon": "icon-arrow-right",
     "firstNavOpen": false,
     "firstNavCallback": this.toggleSecondNav,
     "secondNavs": [{
       "secondNavName": "TDH服务",
-      "secondNavIcon": "icon-settings",
+      "secondNavIcon": "icon-tdh-service",
       "secondNavOpen": false,
       "secondNavCallback": () => {}
     },{
       "secondNavName": "Transwarp Studio",
-      "secondNavIcon": "icon-settings",
+      "secondNavIcon": "icon-transwarp-studio",
       "secondNavOpen": false,
       "secondNavBlock": false,//if open is blocked
       "secondNavCallback": this.toggleThirdNav,
       "thirdNavs": [{
         "thirdNavName": "报表",
-        "thirdNavIcon": "icon-settings",
+        "thirdNavIcon": "icon-report",
         "thirdNavCallback": () => {}
       },{
         "thirdNavName": "Notebook",
-        "thirdNavIcon": "icon-settings",
+        "thirdNavIcon": "icon-notebook",
         "thirdNavCallback": () => {}
       },{
         "thirdNavName": "分析",
-        "thirdNavIcon": "icon-settings",
+        "thirdNavIcon": "icon-analyze",
         "thirdNavCallback": () => {}
       },{
         "thirdNavName": "工作流",
-        "thirdNavIcon": "icon-settings",
+        "thirdNavIcon": "icon-workflow",
         "thirdNavCallback": () => {}
       },{
         "thirdNavName": "OLAP",
-        "thirdNavIcon": "icon-settings",
+        "thirdNavIcon": "icon-olap",
         "thirdNavCallback": () => {}
       },{
         "thirdNavName": "元数据",
-        "thirdNavIcon": "icon-settings",
+        "thirdNavIcon": "icon-metadata",
         "thirdNavCallback": () => {}
       },{
         "thirdNavName": "TDT",
-        "thirdNavIcon": "icon-settings",
+        "thirdNavIcon": "icon-tdt",
         "thirdNavCallback": () => {}
       },{
         "thirdNavName": "BulkLoad",
-        "thirdNavIcon": "icon-settings",
+        "thirdNavIcon": "icon-bulkload",
         "thirdNavCallback": () => {}
       },{
         "thirdNavName": "HDFS浏览",
-        "thirdNavIcon": "icon-settings",
+        "thirdNavIcon": "icon-hdfs-browser",
         "thirdNavCallback": () => {}
       },{
         "thirdNavName": "Transpedia",
-        "thirdNavIcon": "icon-settings",
+        "thirdNavIcon": "icon-transpedia",
         "thirdNavCallback": () => {}
       }]
+    },{
+      "secondNavName": "数据资产",
+      "secondNavIcon": "icon-data-asset",
+      "secondNavOpen": false,
+      "secondNavCallback": () => {}
+    },{
+      "secondNavName": "项目资产",
+      "secondNavIcon": "icon-project-asset",
+      "secondNavOpen": false,
+      "secondNavCallback": () => {}
+    },{
+      "secondNavName": "应用市场",
+      "secondNavIcon": "icon-application-market",
+      "secondNavOpen": false,
+      "secondNavCallback": () => {}
+    },{
+      "secondNavName": "模型商店",
+      "secondNavIcon": "icon-model-store",
+      "secondNavOpen": false,
+      "secondNavCallback": () => {}
     }]
   },{
     "firstNavName": "管理",
-    "firstNavIcon": "icon-arrow",
+    "firstNavIcon": "icon-arrow-right",
     "firstNavOpen": false,
     "firstNavCallback": this.toggleSecondNav,
     "secondNavs": [{
       "secondNavName": "租户",
-      "secondNavIcon": "icon-settings",
+      "secondNavIcon": "icon-tenant",
       "secondNavOpen": false,
       "secondNavCallback": () => {}
     },{
       "secondNavName": "用户",
-      "secondNavIcon": "icon-settings",
+      "secondNavIcon": "icon-user",
       "secondNavOpen": false,
       "secondNavCallback": () => {}
     },{
       "secondNavName": "角色",
-      "secondNavIcon": "icon-settings",
+      "secondNavIcon": "icon-role",
       "secondNavOpen": false,
       "secondNavCallback": () => {}
     }]
   },{
     "firstNavName": "个人",
-    "firstNavIcon": "icon-arrow",
+    "firstNavIcon": "icon-arrow-right",
     "firstNavOpen": false,
     "firstNavCallback": this.toggleSecondNav,
     "secondNavs": [{
       "secondNavName": "消息",
-      "secondNavIcon": "icon-settings",
+      "secondNavIcon": "icon-message",
       "secondNavOpen": false,
       "secondNavCallback": () => {}
     },{
       "secondNavName": "工单",
-      "secondNavIcon": "icon-settings",
+      "secondNavIcon": "icon-ticket",
       "secondNavOpen": false,
       "secondNavCallback": () => {}
     }]

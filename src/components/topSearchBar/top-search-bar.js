@@ -26,8 +26,8 @@ export class TopSearchBar {
 
   }
   
-  setup() {
-    console.log("setup");
+  personalConfigure() {
+    console.log("personalConfigure");
   }
 
   logout() {
