@@ -74,8 +74,15 @@ div.t-component-left-nav-bar {
           line-height: 40px;
           width: 40px;
           text-align: center;
+          position: relative;
+          left: 5px;
+          top: 1px;
           @include transition(transform 0.3s);
           @include transform(translateZ(0));
+
+          &.icon-arrow-right {
+            color: rgb(95, 108, 128);
+          }
         }
 
         &.active, &:hover {
