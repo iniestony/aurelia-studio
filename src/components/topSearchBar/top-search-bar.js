@@ -9,7 +9,7 @@ export class TopSearchBar {
   showUserInfo = false;
   
   username = "support@transwarp.io";
-  alerts = 0;
+  alerts = 23;
 
   toggleMenu() {
     this.showUserInfo = !this.showUserInfo;
