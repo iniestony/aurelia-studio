@@ -9,7 +9,8 @@ export class Portal {
 
   configureRouter(config, router) {
     config.map([
-      { route: "/dashboard", name: "dashboard", moduleId: "../dashboard/dashboard", nav: true, title: "首页"}
+      { route: "/homepage", name: "homepage", moduleId: "../homepage/homepage", nav: true, title: "首页"},
+      { route: "/ticket", name: "ticket", moduleId: "../ticket/ticket", nav: true, title: "工单"}
     ]);
 
     this.router = router;

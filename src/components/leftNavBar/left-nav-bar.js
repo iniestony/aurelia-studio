@@ -43,7 +43,9 @@ export class LeftNavBar {
     "firstNavName": "首页",
     "firstNavIcon": "icon-homepage",
     "firstNavOpen": false,
-    "firstNavCallback": () => {}
+    "firstNavCallback": () => {
+      this.navigate("homepage");
+    }
   },{
     "firstNavName": "产品与服务",
     "firstNavIcon": "icon-arrow-right",
@@ -53,13 +55,15 @@ export class LeftNavBar {
       "secondNavName": "TDH服务",
       "secondNavIcon": "icon-tdh-service",
       "secondNavOpen": false,
-      "secondNavCallback": () => {}
+      "secondNavMouseCallback": () => {},
+      "secondNavClickCallback": () => {}
     },{
       "secondNavName": "Transwarp Studio",
       "secondNavIcon": "icon-transwarp-studio",
       "secondNavOpen": false,
       "secondNavBlock": false,//if open is blocked
-      "secondNavCallback": this.toggleThirdNav,
+      "secondNavMouseCallback": this.toggleThirdNav,
+      "secondNavClickCallback": () => {},
       "thirdNavs": [{
         "thirdNavName": "报表",
         "thirdNavIcon": "icon-report",
@@ -105,22 +109,26 @@ export class LeftNavBar {
       "secondNavName": "数据资产",
       "secondNavIcon": "icon-data-asset",
       "secondNavOpen": false,
-      "secondNavCallback": () => {}
+      "secondNavMouseCallback": () => {},
+      "secondNavClickCallback": () => {}
     },{
       "secondNavName": "项目资产",
       "secondNavIcon": "icon-project-asset",
       "secondNavOpen": false,
-      "secondNavCallback": () => {}
+      "secondNavMouseCallback": () => {},
+      "secondNavClickCallback": () => {}
     },{
       "secondNavName": "应用市场",
       "secondNavIcon": "icon-application-market",
       "secondNavOpen": false,
-      "secondNavCallback": () => {}
+      "secondNavMouseCallback": () => {},
+      "secondNavClickCallback": () => {}
     },{
       "secondNavName": "模型商店",
       "secondNavIcon": "icon-model-store",
       "secondNavOpen": false,
-      "secondNavCallback": () => {}
+      "secondNavMouseCallback": () => {},
+      "secondNavClickCallback": () => {}
     }]
   },{
     "firstNavName": "管理",
@@ -131,17 +139,20 @@ export class LeftNavBar {
       "secondNavName": "租户",
       "secondNavIcon": "icon-tenant",
       "secondNavOpen": false,
-      "secondNavCallback": () => {}
+      "secondNavMouseCallback": () => {},
+      "secondNavClickCallback": () => {}
     },{
       "secondNavName": "用户",
       "secondNavIcon": "icon-user",
       "secondNavOpen": false,
-      "secondNavCallback": () => {}
+      "secondNavMouseCallback": () => {},
+      "secondNavClickCallback": () => {}
     },{
       "secondNavName": "角色",
       "secondNavIcon": "icon-role",
       "secondNavOpen": false,
-      "secondNavCallback": () => {}
+      "secondNavMouseCallback": () => {},
+      "secondNavClickCallback": () => {}
     }]
   },{
     "firstNavName": "个人",
@@ -152,12 +163,16 @@ export class LeftNavBar {
       "secondNavName": "消息",
       "secondNavIcon": "icon-message",
       "secondNavOpen": false,
-      "secondNavCallback": () => {}
+      "secondNavMouseCallback": () => {},
+      "secondNavClickCallback": () => {}
     },{
       "secondNavName": "工单",
       "secondNavIcon": "icon-ticket",
       "secondNavOpen": false,
-      "secondNavCallback": () => {}
+      "secondNavMouseCallback": () => {},
+      "secondNavClickCallback": () => {
+        this.navigate("ticket");
+      }
     }]
   }];
 

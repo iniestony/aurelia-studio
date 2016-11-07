@@ -13,8 +13,9 @@
         </label>
         <ul class="second-ul">
           <li class="second-nav" repeat.for="secondNav of navigation.secondNavs">
-            <a mouseover.trigger="secondNav.secondNavCallback(secondNav, $event, true)"
-               mouseleave.trigger="secondNav.secondNavCallback(secondNav, $event, false)">
+            <a mouseover.trigger="secondNav.secondNavMouseCallback(secondNav, $event, true)"
+               mouseleave.trigger="secondNav.secondNavMouseCallback(secondNav, $event, false)"
+               click.trigger="secondNav.secondNavClickCallback(secondNav, $event)">
               <span class="icon ${secondNav.secondNavIcon}"></span>
               ${secondNav.secondNavName}
             </a>
