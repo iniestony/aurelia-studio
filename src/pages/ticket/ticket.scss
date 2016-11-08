@@ -64,7 +64,95 @@ div.t-page-ticket {
   div.ticket-body {
     background-color: rgb(240, 244, 247);
     min-height: calc(100vh - 140px);
+    padding: 10px 20px;
 
+    div.ticket-container {
+      background-color: rgb(255, 255, 255);
+      border: 1px solid rgb(221, 221, 221);
+
+      div.ticket-search-bar {
+        height: 60px;
+        border-bottom: 1px solid rgb(221, 221, 221);
+        display: flex;
+        justify-content: space-between;
+
+        div.single-item-filter {
+          width: 250px;
+          position: relative;
+
+          &.single-item-filter-sm {
+            width: 150px;
+          }
+
+          label {
+            line-height: 60px;
+            margin: 0px 8px;
+            font-weight: bolder;
+          }
+
+          input {
+            display: inline-block;
+            width: 150px;
+            height: 35px;
+            position: absolute;
+            @include center(y);
+            font-size: 16px;
+          }
+
+          button {
+            position: absolute;
+            @include center(xy);
+            width: 80px;
+            height: 35px;
+            line-height: 35px;
+            padding: 0;
+            background-color: rgb(28, 120, 185);
+            color: rgb(255, 255, 255);
+            border: 1px solid rgb(0, 94, 146);
+            border-radius: 4px;
+            outline: 0;
+
+            & > span.icon-filter {
+              position: relative;
+              top: 1px;
+              left: -2px;
+            }
+          }
+        }
+
+        div.double-item-filter {
+          width: 350px;
+
+          div.filter-item {
+            width: 160px;
+            position: relative;
+            display: inline-block;
+
+            label {
+              line-height: 60px;
+              margin: 0px 8px;
+              font-weight: bolder;
+            }
+
+            input {
+              display: inline-block;
+              width: 120px;
+              height: 35px;
+              position: absolute;
+              @include center(y);
+              font-size: 16px;
+            }
+          }
+        }
+      }
+
+
+
+
+
+
+
+    }
 
   }
 }
