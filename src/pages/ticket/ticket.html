@@ -48,7 +48,46 @@
           </div>
         </div>
 
-
+        <table class="table tickets-table">
+          <thead>
+            <tr>
+              <td></td>
+              <td>ID</td>
+              <td>P</td>
+              <td>标题</td>
+              <td>队列</td>
+              <td>类别</td>
+              <td>状态</td>
+              <td>创建时间</td>
+              <td>截止时间</td>
+              <td>创建者</td>
+              <td>操作</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr repeat.for="ticket of tickets">
+              <td><input type="checkbox"/></td>
+              <td>${ticket.id}</td>
+              <td>${ticket.p}</td>
+              <td class="ticket-title">
+                ${(ticket.title && ticket.title.length > 8)?ticket.title.substring(0, 8) + "...":ticket.title}
+              </td>
+              <td>${ticket.queue}</td>
+              <td>${ticket.category}</td>
+              <td>
+                ${ticket.status}
+              </td>
+              <td>${ticket.createDate}</td>
+              <td>${ticket.endDate}</td>
+              <td>${ticket.creator}</td>
+              <td>
+                <span class="ticket-table-icon icon-cross-flow"></span>
+                <span class="ticket-table-icon icon-remove"></span>
+                <span class="ticket-table-icon icon-power"></span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
