@@ -64,7 +64,7 @@ div.t-page-ticket {
 
   div.ticket-body {
     background-color: rgb(240, 244, 247);
-    min-height: calc(100vh - 120px);
+    min-height: calc(100vh - 114px);
     padding: 10px 20px;
 
     div.ticket-container {
@@ -72,7 +72,7 @@ div.t-page-ticket {
       border: 1px solid rgb(221, 221, 221);
 
       div.ticket-search-bar {
-        height: 60px;
+        height: 50px;
         border-bottom: 1px solid rgb(221, 221, 221);
         display: flex;
         justify-content: space-between;
@@ -86,32 +86,34 @@ div.t-page-ticket {
           }
 
           label {
-            line-height: 60px;
+            line-height: 50px;
             margin: 0px 8px 0px 20px;
             font-weight: bolder;
+            font-size: 14px;
           }
 
           input {
             display: inline-block;
             width: 150px;
-            height: 35px;
+            height: 30px;
             position: absolute;
             @include center(y);
-            font-size: 16px;
+            font-size: 14px;
           }
 
           button {
             position: absolute;
             @include center(xy);
             width: 80px;
-            height: 35px;
-            line-height: 35px;
+            height: 30px;
+            line-height: 30px;
             padding: 0;
             background-color: rgb(28, 120, 185);
             color: rgb(255, 255, 255);
             border: 1px solid rgb(0, 94, 146);
             border-radius: 4px;
             outline: 0;
+            font-size: 14px;
 
             & > span.icon-filter {
               position: relative;
@@ -125,23 +127,24 @@ div.t-page-ticket {
           width: 350px;
 
           div.filter-item {
-            width: 160px;
+            width: 146px;
             position: relative;
             display: inline-block;
 
             label {
-              line-height: 60px;
-              margin: 0px 8px;
+              line-height: 50px;
+              margin: 0px 8px 0 0;
               font-weight: bolder;
+              font-size: 14px;
             }
 
             input {
               display: inline-block;
               width: 120px;
-              height: 35px;
+              height: 30px;
               position: absolute;
               @include center(y);
-              font-size: 16px;
+              font-size: 14px;
             }
           }
         }
