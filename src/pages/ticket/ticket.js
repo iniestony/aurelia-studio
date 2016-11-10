@@ -12,6 +12,22 @@ export class Ticket {
     "keyword": ""
   };
 
+  showAssigneeFilter = false;
+
+  selectedAssignee = {
+    "name": "指派给任何人的工单",
+    "value": ""
+  };
+
+  allAssignees = [{
+    "name": "指派给任何人的工单",
+    "value": ""
+  },{
+    "name": "指派给我的工单",
+    "value": "iniestony"
+  }];
+
+
   tickets = [{
     "id": "CA-123",
     "title": "工单名称工单名称工单名称",
@@ -100,6 +116,18 @@ export class Ticket {
     keys.forEach((key) => {
       this.query[key] = "";
     });
+  }
+
+  toggleAssignee() {
+    this.showAssigneeFilter = !this.showAssigneeFilter;
+  }
+
+  closeAssignee() {
+    this.showAssigneeFilter = false;
+  }
+
+  selectAssignee(_assignee) {
+    this.selectedAssignee = _assignee;
   }
 
   createTicket() {

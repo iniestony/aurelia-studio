@@ -41,6 +41,19 @@
                    blur.trigger="cleanQuery('keyword', ['ticketNo'])"/>
           </div>
 
+          <div class="single-dropdown-filter">
+            <label click.trigger="toggleAssignee()"
+                   blur.trigger="closeAssignee()" tabindex="0">
+              ${selectedAssignee.name}
+              <ul if.bind="showAssigneeFilter">
+                <li repeat.for="assignee of allAssignees"
+                    click.trigger="selectAssignee(assignee)">
+                  ${assignee.name}
+                </li>
+              </ul>
+            </label>
+          </div>
+
           <div class="single-item-filter single-item-filter-sm">
             <button click.trigger="search()">
               <span class="icon-filter"></span>检索
