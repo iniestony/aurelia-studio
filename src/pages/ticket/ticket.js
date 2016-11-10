@@ -21,27 +21,45 @@ export class Ticket {
     "status": "RESOLVED",
     "createDate": "2016.07.10",
     "endDate": "2016.07.10",
-    "creator": "iniestony"
+    "creator": "iniestony",
+    "assignee": "iniestony",
+    "selected": false
   },{
     "id": "CA-123",
     "title": "工单名称工单名称工单名称",
     "p": 2,
     "queue": "平台资源申请",
     "category": "InceptorQuery",
-    "status": "RESOLVED",
+    "status": "DUPLICATED",
     "createDate": "2016.07.10",
     "endDate": "2016.07.10",
-    "creator": "iniestony"
+    "creator": "iniestony",
+    "assignee": "",
+    "selected": false
   },{
     "id": "CA-123",
     "title": "工单名称工单名称工单名称",
     "p": 2,
     "queue": "平台资源申请",
     "category": "InceptorQuery",
-    "status": "RESOLVED",
+    "status": "CLOSED",
     "createDate": "2016.07.10",
     "endDate": "2016.07.10",
-    "creator": "iniestony"
+    "creator": "iniestony",
+    "assignee": "iniestony",
+    "selected": false
+  },{
+    "id": "CA-123",
+    "title": "工单名称",
+    "p": 2,
+    "queue": "平台资源申请",
+    "category": "InceptorQuery",
+    "status": "OPEN",
+    "createDate": "2016.07.10",
+    "endDate": "2016.07.10",
+    "creator": "iniestony",
+    "assignee": "iniestony",
+    "selected": false
   },{
     "id": "CA-123",
     "title": "工单名称",
@@ -51,27 +69,21 @@ export class Ticket {
     "status": "RESOLVED",
     "createDate": "2016.07.10",
     "endDate": "2016.07.10",
-    "creator": "iniestony"
+    "creator": "iniestony",
+    "assignee": "",
+    "selected": false
   },{
     "id": "CA-123",
     "title": "工单名称",
     "p": 2,
     "queue": "平台资源申请",
     "category": "InceptorQuery",
-    "status": "RESOLVED",
+    "status": "REOPENED",
     "createDate": "2016.07.10",
     "endDate": "2016.07.10",
-    "creator": "iniestony"
-  },{
-    "id": "CA-123",
-    "title": "工单名称",
-    "p": 2,
-    "queue": "平台资源申请",
-    "category": "InceptorQuery",
-    "status": "RESOLVED",
-    "createDate": "2016.07.10",
-    "endDate": "2016.07.10",
-    "creator": "iniestony"
+    "creator": "iniestony",
+    "assignee": "iniestony",
+    "selected": false
   }];
   
   constructor(r, u) {

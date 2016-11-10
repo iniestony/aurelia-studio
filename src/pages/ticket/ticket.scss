@@ -202,6 +202,21 @@ div.t-page-ticket {
               color: #29e;
             }
 
+            span.icon-circle {
+
+              &.open, &.reopened, &.duplicated {
+                color: #29e;
+              }
+
+              &.resolved {
+                color: rgb(62, 156, 61);
+              }
+
+              &.closed {
+                color: rgb(185, 190, 195);
+              }
+            }
+
             span.ticket-table-icon {
               display: inline-block;
               font-size: 16px;
@@ -222,7 +237,7 @@ div.t-page-ticket {
             }
           }
 
-          &:hover {
+          &:hover, &.selected {
             background-color: rgb(229, 239, 248);
           }
         }
