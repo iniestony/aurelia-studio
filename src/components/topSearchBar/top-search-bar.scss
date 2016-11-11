@@ -15,7 +15,6 @@ div.t-component-top-search-bar {
     border-bottom: 1px solid rgb(221, 221, 221);
     display: flex;
     justify-content: space-between;
-    overflow-x: auto;
 
     div.search-left {
 
@@ -33,7 +32,7 @@ div.t-component-top-search-bar {
         border: none;
         outline: 0;
         line-height: 40px;
-        width: 600px;
+        width: 40vw;
         background-color: transparent;
         font-size: 16px;
       }
