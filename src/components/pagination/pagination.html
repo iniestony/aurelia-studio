@@ -1,37 +1,35 @@
 <template>
-  <div class="table-pagination">
-    <ul class="pagination">
-      <li class="previous ${isFirstPage?'disabled':''}" if.bind="totalPage > 0" click.trigger="toPrev()">
-        <a>&laquo;</a>
-      </li>
-      <li class="${(pageIndex === 1)?'active':''}" if.bind="totalPage > 0" click.trigger="toSpecify(1)">
-        <a>1</a>
-      </li>
-      <li class="disabled" if.bind="totalPage > 6 && boundIndex > 2">
-        <a>...</a>
-      </li>
-      <li class="${(pageIndex === boundIndex)?'active':''}" if.bind="totalPage > 2" click.trigger="toSpecify(boundIndex)">
-        <a>${boundIndex}</a>
-      </li>
-      <li class="${(pageIndex === boundIndex + 1)?'active':''}" if.bind="totalPage > 3" click.trigger="toSpecify(boundIndex + 1)">
-        <a>${boundIndex + 1}</a>
-      </li>
-      <li class="${(pageIndex === boundIndex + 2)?'active':''}" if.bind="totalPage > 4" click.trigger="toSpecify(boundIndex + 2)">
-        <a>${boundIndex + 2}</a>
-      </li>
-      <li class="${(pageIndex === boundIndex + 3)?'active':''}" if.bind="totalPage > 5" click.trigger="toSpecify(boundIndex + 3)">
-        <a>${boundIndex + 3}</a>
-      </li>
-      <li class="disabled" if.bind="totalPage > 6 && (boundIndex + 3 < totalPage - 1)">
-        <a>...</a>
-      </li>
-      <li class="${(pageIndex === totalPage)?'active':''}" if.bind="totalPage > 1" click.trigger="toSpecify(totalPage)">
-        <a>${totalPage}</a>
-      </li>
-      <li class="next ${isLastPage?'disabled':''}" if.bind="totalPage > 0" click.trigger="toNext()">
-        <a>&raquo;</a>
-      </li>
-      <span>共<em>${count}</em>条</span>
-    </ul>
-  </div>
+  <ul class="pagination">
+    <li class="previous ${isFirstPage?'disabled':''}" if.bind="totalPage > 0" click.trigger="toPrev()">
+      <a>&laquo;</a>
+    </li>
+    <li class="${(pageIndex === 1)?'active':''}" if.bind="totalPage > 0" click.trigger="toSpecify(1)">
+      <a>1</a>
+    </li>
+    <li class="disabled" if.bind="totalPage > 6 && boundIndex > 2">
+      <a>...</a>
+    </li>
+    <li class="${(pageIndex === boundIndex)?'active':''}" if.bind="totalPage > 2" click.trigger="toSpecify(boundIndex)">
+      <a>${boundIndex}</a>
+    </li>
+    <li class="${(pageIndex === boundIndex + 1)?'active':''}" if.bind="totalPage > 3" click.trigger="toSpecify(boundIndex + 1)">
+      <a>${boundIndex + 1}</a>
+    </li>
+    <li class="${(pageIndex === boundIndex + 2)?'active':''}" if.bind="totalPage > 4" click.trigger="toSpecify(boundIndex + 2)">
+      <a>${boundIndex + 2}</a>
+    </li>
+    <li class="${(pageIndex === boundIndex + 3)?'active':''}" if.bind="totalPage > 5" click.trigger="toSpecify(boundIndex + 3)">
+      <a>${boundIndex + 3}</a>
+    </li>
+    <li class="disabled" if.bind="totalPage > 6 && (boundIndex + 3 < totalPage - 1)">
+      <a>...</a>
+    </li>
+    <li class="${(pageIndex === totalPage)?'active':''}" if.bind="totalPage > 1" click.trigger="toSpecify(totalPage)">
+      <a>${totalPage}</a>
+    </li>
+    <li class="next ${isLastPage?'disabled':''}" if.bind="totalPage > 0" click.trigger="toNext()">
+      <a>&raquo;</a>
+    </li>
+    <span>共<em>${count}</em>条</span>
+  </ul>
 </template>
