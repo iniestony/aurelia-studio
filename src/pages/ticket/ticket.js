@@ -13,6 +13,8 @@ export class Ticket {
   };
 
   showAssigneeFilter = false;
+  showOperations = false;
+  allSelected = false;
 
   selectedAssignee = {
     "name": "指派给任何人的工单",
@@ -125,9 +127,23 @@ export class Ticket {
   closeAssignee() {
     this.showAssigneeFilter = false;
   }
+  
+  toggleOperation() {
+    this.showOperations = !this.showOperations;
+  }
+  
+  closeOperation() {
+    this.showOperations = false;
+  }
 
   selectAssignee(_assignee) {
     this.selectedAssignee = _assignee;
+  }
+
+  selectAll() {
+    this.tickets.forEach((_t) => {
+      _t.selected = this.allSelected;
+    });
   }
 
   createTicket() {

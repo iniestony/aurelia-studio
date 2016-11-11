@@ -80,7 +80,10 @@
           </thead>
           <tbody>
             <tr repeat.for="ticket of tickets" class="${(ticket.selected)?'selected':''}">
-              <td><input type="checkbox" checked.bind="ticket.selected"/></td>
+              <td>
+                <input type="checkbox" checked.bind="ticket.selected" id="ticket${$index}"/>
+                <label class="mock-checkbox ${ticket.selected?'selected':''}" for="ticket${$index}"></label>
+              </td>
               <td>${ticket.id}</td>
               <td>${ticket.p}</td>
               <td class="ticket-title">
@@ -104,6 +107,28 @@
             </tr>
           </tbody>
         </table>
+
+        <div class="ticket-pagination">
+          <div class="all-select">
+            <input type="checkbox" checked.bind="allSelected" id="allSelected" change.trigger="selectAll()"/>
+            <label class="mock-checkbox ${allSelected?'selected':''}" for="allSelected"></label>
+            <label class="mock-checkbox-label" for="allSelected">全选</label>
+          </div>
+
+          <div class="ticket-operation">
+            <label click.trigger="toggleOperation()"
+                   blur.trigger="closeOperation()" tabindex="0">
+              <span class="operation-text">操作</span>
+              <span class="icon-arrow-bottom"></span>
+              <ul if.bind="showOperations">
+                <li click.trigger="">编辑</li>
+                <li click.trigger="">指派</li>
+              </ul>
+            </label>
+          </div>
+
+
+        </div>
       </div>
     </div>
   </div>

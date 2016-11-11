@@ -236,14 +236,42 @@ div.t-page-ticket {
             &:first-child {
               padding: 8px 0;
               text-align: right;
-              width: 25px;
+              width: 30px;
+              position: relative;
 
               input[type=checkbox] {
-                width: 14px;
-                height: 14px;
-                margin: 0;
-                position: relative;
-                top: -2px;
+                display: none;
+              }
+
+              label.mock-checkbox {
+                width: 18px;
+                height: 18px;
+                background: #eee;
+                border: 1px solid #d8dde3;
+                cursor: pointer;
+                position: absolute;
+                top: 10px;
+                left: 8px;
+                border-radius: 4px;
+
+                &::after {
+                  opacity: 0;
+                  content: '';
+                  width: 12px;
+                  height: 8px;
+                  border: 2px solid rgb(101, 101, 101);
+                  @include transform(rotate(-52deg));
+                  background: transparent;
+                  border-top: none;
+                  border-right: none;
+                  position: absolute;
+                  top: 20%;
+                  left: 15%;
+                }
+
+                &.selected::after {
+                  opacity: 1;
+                }
               }
             }
 
@@ -293,6 +321,136 @@ div.t-page-ticket {
 
           &:hover, &.selected {
             background-color: rgb(229, 239, 248);
+          }
+        }
+      }
+
+      div.ticket-pagination {
+        height: 50px;
+        border-top: 1px solid rgb(221, 221, 221);
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+        width: calc(100% - 40px);
+        margin: 0 20px;
+        font-size: 14px;
+
+        div.all-select {
+          position: relative;
+          width: 100px;
+
+          input[type=checkbox] {
+            display: none;
+          }
+
+          label.mock-checkbox {
+            width: 18px;
+            height: 18px;
+            background: #eee;
+            border: 1px solid #d8dde3;
+            cursor: pointer;
+            position: absolute;
+            @include center(y);
+            left: 8px;
+            border-radius: 4px;
+
+            &::after {
+              opacity: 0;
+              content: '';
+              width: 12px;
+              height: 8px;
+              border: 2px solid rgb(101, 101, 101);
+              @include transform(rotate(-52deg));
+              background: transparent;
+              border-top: none;
+              border-right: none;
+              position: absolute;
+              top: 20%;
+              left: 15%;
+            }
+
+            &.selected::after {
+              opacity: 1;
+            }
+          }
+
+          label.mock-checkbox-label {
+            cursor: pointer;
+            position: absolute;
+            @include center(y);
+            left: 38px;
+            display: inline-block;
+            width: 60px;
+            @include user-select(none);
+          }
+        }
+
+        div.ticket-operation {
+          width: 70px;
+          position: relative;
+
+          label {
+            display: inline-block;
+            width: 70px;
+            height: 30px;
+            line-height: 30px;
+            position: absolute;
+            @include center(y);
+            font-size: 14px;
+            text-align: center;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-weight: bolder;
+            cursor: pointer;
+            outline: 0;
+            @include user-select(none);
+
+            span.operation-text {
+              display: inline-block;
+              position: relative;
+              left: 4px;
+            }
+
+            span.icon-arrow-bottom {
+              font-size: 20px;
+              display: inline-block;
+              position: relative;
+              top: 4px;
+              left: 2px;
+              @include transform(rotate(180deg));
+            }
+
+            ul {
+              position: absolute;
+              bottom: 29px;
+              left: -1px;
+              width: calc(100% + 2px);
+              border: 1px solid rgb(221, 221, 221);
+              border-radius: 4px;
+              background-color: rgb(255, 255, 255);
+              z-index: 2;
+
+              li {
+                height: 25px;
+                line-height: 25px;
+                font-size: 14px;
+                padding: 0 10px;
+
+                &:first-child {
+                  border-top-left-radius: 4px;
+                  border-top-right-radius: 4px;
+                }
+
+                &:last-child {
+                  border-bottom-left-radius: 4px;
+                  border-bottom-right-radius: 4px;
+                }
+
+                &:hover {
+                  background-color: rgb(243, 244, 246);
+                }
+              }
+            }
           }
         }
       }
