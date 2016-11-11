@@ -1,4 +1,5 @@
 <template>
+  <require from="../../components/pagination/pagination"></require>
   <div class="t-page-ticket">
     <div class="ticket-header">
       <div class="header-left">
@@ -127,7 +128,7 @@
             </label>
           </div>
 
-
+          <pagination page-index.bind="pagination.pageIndex" total-page.bind="pagination.totalPage" count.bind="pagination.count"></pagination>
         </div>
       </div>
     </div>

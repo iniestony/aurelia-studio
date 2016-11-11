@@ -12,6 +12,12 @@ export class Ticket {
     "keyword": ""
   };
 
+  pagination = {
+    "pageIndex": 1,
+    "totalPage": 10,
+    "count": 100
+  };
+
   showAssigneeFilter = false;
   showOperations = false;
   allSelected = false;
