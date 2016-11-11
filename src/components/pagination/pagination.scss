@@ -1,40 +1,54 @@
-ul.pagination {
+ul.custom-pagination {
   text-align: right;
+  margin: 0;
+  padding: 0;
+  display: block;
 
   li {
     display: inline-block;
-    margin: 0 3px;
-    padding: 6px 9px;
-    border: 1px solid #ccc;
-    border-radius: 2px;
+    margin: 8px;
+    height: 34px;
+    width: 34px;
     background: rgb(255, 255, 255);
     cursor: pointer;
 
+    a {
+      display: inline-block;
+      height: 34px;
+      width: 34px;
+      margin: 0;
+      border-radius: 0;
+      line-height: 34px;
+      border: 1px solid #d8dde3;
+      text-decoration: none;
+      text-align: center;
+      color: rgb(101, 101, 101);
+      @include user-select(none);
+    }
+
 
     &:hover {
-      //background: $pager-hover-bg;
+      background: rgb(242, 243, 245);
     }
+
     &.active {
-      background: rgb(120,128,150);
+      background: #29e;
+
       a {
         display: inline-block;
         color: rgb(255, 255, 255);
       }
     }
+
     &.previous, &.next {
-      //background: $background-color;
+      background: rgb(242, 243, 245);
     }
-    &.start, &.last {
-      border: none;
-      background: none;
-    }
-    a {
-      //color: $main-font-color;
-    }
+
+
+
     &.disabled {
-      //color: $pager-disabled-color;
-      //background-color: $pager-disabled-bg;
       cursor: not-allowed;
+
       a {
         cursor: not-allowed;
       }
