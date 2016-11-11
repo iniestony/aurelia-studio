@@ -141,6 +141,7 @@ div.t-page-ticket {
             font-weight: bolder;
             cursor: pointer;
             outline: 0;
+            @include user-select(none);
 
             ul {
               position: absolute;
