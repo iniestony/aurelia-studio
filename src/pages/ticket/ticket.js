@@ -14,8 +14,7 @@ export class Ticket {
 
   pagination = {
     "pageIndex": 1,
-    "totalPage": 10,
-    "count": 100
+    "totalPage": 10
   };
 
   showAssigneeFilter = false;

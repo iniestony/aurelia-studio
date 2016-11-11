@@ -4,7 +4,6 @@ import {bindable, bindingMode, containerless} from 'aurelia-framework';
 export class Pagination {
   @bindable({ defaultBindingMode: bindingMode.twoWay }) pageIndex;
   @bindable({ defaultBindingMode: bindingMode.twoWay }) totalPage;
-  @bindable({ defaultBindingMode: bindingMode.twoWay }) count;
   boundIndex = 2;
 
   pageIndexChanged(n, o) {

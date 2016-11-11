@@ -1,5 +1,6 @@
-.pagination {
+ul.pagination {
   text-align: right;
+
   li {
     display: inline-block;
     margin: 0 3px;
@@ -8,6 +9,8 @@
     border-radius: 2px;
     background: rgb(255, 255, 255);
     cursor: pointer;
+
+
     &:hover {
       //background: $pager-hover-bg;
     }
